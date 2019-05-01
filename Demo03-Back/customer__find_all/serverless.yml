@@ -1,0 +1,24 @@
+service:
+  name: aws-nodejs-ecma-script
+
+# Add the serverless-webpack plugin
+plugins:
+  - serverless-webpack
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+custom:
+  webpack:
+    includeModules: true
+
+functions:
+  first:
+    handler: src/index.handler
+    events:
+      - http:
+          method: GET
+          path: customers

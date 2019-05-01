@@ -1,0 +1,10 @@
+<div class="mb-md-4">
+  <div class="card" style="width: 18rem;" *ngFor="let post of posts">
+      <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXCDOHSzSpa1O_sakNCU5Ur4U4gXABdPa_Y4wJoJqkzBQYaPCm" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{post.id}} - {{post.title}}</h5>
+        <p class="card-text">{{post.body}}</p>
+        <a href="#" class="btn btn-primary">Detalle</a>
+      </div>
+    </div>
+</div>
